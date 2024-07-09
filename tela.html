@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+
+  <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <?!= include('styles'); ?>
+</head>
+
+<body>
+  <h3>Essa Aplicação foi feita para facilitar a conferencia das Listas de Presenças das Formações Online.</h3>
+
+  <p>Lembre-se que os nomes e as matriculas da LISTA DE PRESENÇA devem estar em planilha separada somente nas
+    <strong>COLUNAS A e B</strong>
+  </p>
+  <form class="formulario">
+    <div class="planilha">
+      <div class="planilha_url">
+        <label for="planPresenca">Planilha Presenças</label>
+        <input type="text" class="url" name="presenca" id="planPresenca" placeholder="Link da planilha"/>
+      </div>
+      <div class="planilha_inter">
+        <label for="interPresenca">Intervalo</label>
+        <input type="text" class="inter" name="interPresenca" id="interPresenca" placeholder="A1:B100"/>
+      </div>
+    </div>
+    <div class="planilha">
+      <div class="planilha_url">
+        <label for="planControle">Planilha Controle</label>
+        <input type="text" class="url" name="controle" id="planControle" placeholder="Link da planilha"/>
+      </div>
+      <div class="planilha_inter">
+        <label for="interControle">Intervalo</label>
+        <input type="text" class="inter" name="interControle" id="interControle" placeholder="A1:B100"/>
+      </div>
+    </div>
+    <div class="infos">
+      <div class="planilha_inter">
+        <label for="coluna">Coluna presença</label>
+        <input type="text" name="coluna" id="coluna" />
+      </div>
+    </div>
+    <div class="botoes">
+      <!-- <button class="action" id="conferir" onclick="google.script.run.processForm(this.parentNode.parentNode)">CONFERIR</button> -->
+      <button class="action" id="conferir" onclick="processarForm(this.parentNode.parentNode)">CONFERIR</button>
+      <!-- <button onclick="google.script.host.close()">CANCELAR</button> -->
+    </div>
+  <div class="aviso" id="aviso">
+    <img
+        class="rotate"
+        srcset="https://drive.google.com/thumbnail?id=1bWmvzrkLf_u40oWE0UCZFkHMeQo6873F"
+        alt=""
+      />
+
+    <p>
+      Executando o Script<br />
+        Por Favor aguarde
+    </p>
+  </div>
+  </form>
+  <?!= include('js'); ?>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<style>
+    body {
+      margin: 8px;
+    }
+  
+    .formulario {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    div {
+      display: flex;
+      flex-direction: column;
+  
+    }
+  
+    .botoes {
+      flex-direction: row;
+      display: inline-flex;
+  
+    }
+  
+    .planilha_inter input {
+      width: 64px;
+    }
+  
+    @keyframes executando {
+      0% {
+        transform: rotate(0);
+      }
+  
+      25% {
+        transform: rotate(90deg);
+      }
+  
+      50% {
+        transform: rotate(180deg);
+      }
+  
+      75% {
+        transform: rotate(270deg);
+      }
+  
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  
+    .rotate {
+      animation: executando 5s cubic-bezier(1, 0.95, 0.66, 0.81) infinite;
+    }
+  
+    .aviso {
+      display: none;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      
+      border: 2px solid black;
+      border-radius: 16px;
+      padding: 8px;
+  
+    }
+  
+    .aberto {
+      display: inline-flex;
+      
+    }
+  
+    .aviso img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
